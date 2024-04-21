@@ -1,5 +1,6 @@
 import {Card, Group, Space, Title, Text, Image} from "@mantine/core";
 import {useParams} from "react-router-dom";
+import {Fragment} from "react";
 
 const mockCourse = {
     id: 1,
@@ -50,7 +51,7 @@ export function Course() {
             <Title order={5}>Lecturer: {mockCourse.lecturer}</Title>
             <Space h="md"/>
             {mockCourse.lectures.map(lecture => (
-                <>
+                <Fragment key={lecture.id}>
                     <Card withBorder shadow="sm" p="lg" key={lecture.id}>
                         <Group align="start">
                             <Image src={mockCourse.image} alt={mockCourse.name}/>
@@ -60,15 +61,15 @@ export function Course() {
                         </Group>
                     </Card>
                     <Space h="md"/>
-                </>
+                </Fragment>
             ))}
             {mockCourse.materials.map(material => (
-                <>
+                <Fragment key={material.id}>
                     <a href={material.link}>
                         {material.name}
                     </a>
                     <Space h="md"/>
-                </>
+                </Fragment>
             ))}
         </>
     )

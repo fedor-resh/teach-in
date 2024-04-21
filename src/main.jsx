@@ -44,10 +44,11 @@ const router = createBrowserRouter([
         ],
     }
 ]);
+
 const theme = createTheme({
     colorScheme: 'dark',
+    primaryColor: 'violet',
 })
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <MantineProvider theme={theme}>
