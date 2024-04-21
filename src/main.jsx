@@ -36,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/course/:id",
                 element: <Course/>
+            },
+            {
+                path: "*",
+                element: <Navigate to="/"/>
             }
         ],
     }
