@@ -4,9 +4,9 @@ import {Fragment} from "react";
 
 const mockCourse = {
     id: 1,
-    name: "Course 1",
+    name: "Course",
     image: "https://via.placeholder.com/150",
-    lecturer: "Lecturer 1",
+    lecturer: "Lecturer",
     lectures: [
         {
             id: 1,
@@ -46,9 +46,9 @@ export function Course() {
     const {id: courseId} = useParams()
     return (
         <>
-            <Title>{mockCourse.name}</Title>
+            <Title>{mockCourse.name + " " + courseId}</Title>
             <Space h="md"/>
-            <Title order={5}>Lecturer: {mockCourse.lecturer}</Title>
+            <Title order={5}>Lecturer: {mockCourse.lecturer + " " + courseId}</Title>
             <Space h="md"/>
             {mockCourse.lectures.map(lecture => (
                 <Fragment key={lecture.id}>
