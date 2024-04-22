@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import {Container, Group, Burger, Image} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Header.module.css';
@@ -32,7 +32,9 @@ export function Header() {
     return (
         <header className={classes.header}>
             <Container size="md" className={classes.inner}>
-                <MantineLogo size={28} />
+                <Link to=''>
+                    <Image src="../../logo-mini-without.png" alt="logo" h={120}/>
+                </Link>
                 <Group gap={5} visibleFrom="xs">
                     {items}
                 </Group>
