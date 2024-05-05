@@ -11,8 +11,24 @@ import {Courses} from "./Pages/Courses.jsx";
 import {Lecturers} from "./Pages/Lecturers.jsx";
 import {Materials} from "./Pages/Materials.jsx";
 import {Course} from "./Pages/Course.jsx";
+import { Login } from './Pages/Login.jsx';
+import { ResetPassword } from './Pages/ResetPassword.jsx'
+import Signup from './Pages/Registration.jsx'
+
 
 const router = createBrowserRouter([
+    {
+        path: "/login",
+        element: <Login/>
+    },
+    {
+        path: "/login/resetpassword",
+        element: <ResetPassword/>
+    },
+    {
+        path: "/registration",
+        element: <Signup/>
+    },
     {
         path: "/",
         element: <App/>,
