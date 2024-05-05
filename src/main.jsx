@@ -13,6 +13,7 @@ import {Materials} from "./Pages/Materials.jsx";
 import {Course} from "./Pages/Course.jsx";
 import { Login } from './Pages/Login.jsx';
 import { ResetPassword } from './Pages/ResetPassword.jsx'
+import Signup from './Pages/Registration.jsx'
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: "/login/resetpassword",
         element: <ResetPassword/>
+    },
+    {
+        path: "/registration",
+        element: <Signup/>
     },
     {
         path: "/",

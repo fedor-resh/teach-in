@@ -8,7 +8,7 @@ import {
     Text,
     Container,
     Group,
-    Button,
+    Button
   } from "@mantine/core";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,10 @@ export function Login() {
             </Title>
             <Text c="dimmed" size="sm" ta="center" mt={5}>
                 Нет аккаунта?{' '}
-                <Anchor size="sm" component="button">
+                <Anchor 
+                    size="sm" 
+                    href="/registration"
+                >
                     Зарегестрироваться
                 </Anchor>
             </Text>
@@ -36,7 +39,7 @@ export function Login() {
                 <TextInput label="Email" placeholder="" required />
                 <PasswordInput label="Пароль" placeholder="" required mt="md" />
                 <Group justify="space-between" mt="lg">
-                <Checkbox label="Remember me" />
+                <Checkbox label="Запомните меня" />
                 <Anchor 
                     
                     size="sm"
