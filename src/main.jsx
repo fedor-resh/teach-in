@@ -14,6 +14,7 @@ import {Course} from "./Pages/Course.jsx";
 import { Login } from './Pages/Login.jsx';
 import { ResetPassword } from './Pages/ResetPassword.jsx'
 import Signup from './Pages/Registration.jsx'
+import VideoPage  from './Pages/VideoLecture.jsx'
 
 
 const router = createBrowserRouter([
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
             {
                 path: "/course/:id",
                 element: <Course/>
+            },
+            {
+                path: "/videoLecture/",
+                element: <VideoPage/>,
+                props: true
             },
             {
                 path: "*",
